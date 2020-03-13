@@ -1,6 +1,7 @@
 export AWS_DEFAULT_REGION = us-west-1
 export S3BUCKET = njnmverse
 
+.PHONY: update clean
 
 update : src/contrib/PACKAGES
 	aws s3 sync src s3://${S3BUCKET}/src
